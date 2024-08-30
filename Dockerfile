@@ -1,4 +1,4 @@
-FROM ubuntu:noble
+FROM ubuntu:24.04
 
 # Basic packages needed to download dependencies and unpack them.
 RUN apt-get update && apt-get install -y \
@@ -47,7 +47,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Copy the build scripts.
-COPY build.sh download.pl env.source fetchurl /ffmpeg-static/
+COPY build.sh build-ubuntu.sh download.pl env.source fetchurl /ffmpeg-static/
 
 VOLUME /ffmpeg-static
 WORKDIR /ffmpeg-static

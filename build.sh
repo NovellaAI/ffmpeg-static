@@ -502,6 +502,7 @@ if [ "$platform" = "linux" ]; then
     --enable-nonfree \
     --enable-openssl \
     --enable-librist \
+    --enable-libharfbuzz\
     --enable-libsrt
 elif [ "$platform" = "darwin" ]; then
   [ ! -f config.status ] && PATH="$BIN_DIR:$PATH" \
